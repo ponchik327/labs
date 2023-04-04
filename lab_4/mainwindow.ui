@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="Result" name="TextBrowser">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>100</y>
+      <width>711</width>
+      <height>401</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>50</y>
+      <width>701</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLineEdit" name="SearchEdit"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>449</y>
+      <width>681</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLineEdit" name="Id"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="Name"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="Autor"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="Pages"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="Year"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="add">
+       <property name="text">
+        <string>Add</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>File</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Result</class>
+   <extends>QTextBrowser</extends>
+   <header>result.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>Search()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>697</x>
+     <y>95</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>683</x>
+     <y>105</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>add</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>Add()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>599</x>
+     <y>488</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>654</x>
+     <y>508</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>File()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>707</x>
+     <y>487</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>706</x>
+     <y>532</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>Search()</slot>
+  <slot>Add()</slot>
+  <slot>File()</slot>
+ </slots>
+</ui>
