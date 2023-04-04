@@ -1,0 +1,10 @@
+debug/abstractreader.o
+debug/book.o
+debug/csvreader.o
+debug/csvwriter.o
+debug/main.o
+debug/mainwindow.o
+debug/result.o
+debug/moc_abstractreader.o
+debug/moc_mainwindow.o
+debug/moc_result.o

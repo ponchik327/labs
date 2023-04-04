@@ -1,0 +1,10 @@
+release/abstractreader.o
+release/book.o
+release/csvreader.o
+release/csvwriter.o
+release/main.o
+release/mainwindow.o
+release/result.o
+release/moc_abstractreader.o
+release/moc_mainwindow.o
+release/moc_result.o

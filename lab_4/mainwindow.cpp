@@ -45,7 +45,7 @@ void MainWindow::Search()
     for(uint i = 0; i < books.size(); i++){
         if (ui->SearchEdit->text().toStdString() == books[i].name){
           ui->TextBrowser->append(books[i].to_string());
-          //ui->TextBrowser->RedOutput(QString("%1, %2").arg(QString::fromStdString(books[i].name)). arg(books[i].year));
+          ui->TextBrowser->RedOutput(QString("Ошибка"));
           //ui->TextBrowser->GreenOutput(QString("%1, %2").arg(QString::fromStdString(books[i].name)). arg(books[i].year));
         }
     }
