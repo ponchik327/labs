@@ -4,14 +4,15 @@
 #include<string>
 #include <QString>
 #include <sstream>
+#include <result.h>
+
+// class Result;
 
 class Book
 {
 public:
     Book() = default;
     Book(int, const std::string&, const std::string&, int, int);
-
-public:
     int id;
     std::string name;
     std::string author;
@@ -22,14 +23,11 @@ public:
     QString to_string();
 };
 
-std::istream& operator >>(std::istream& is, Book b) ;
-
 std::ostream& operator <<(std::ostream& os, Book b) ;
 
 bool operator ==(const Book& b1, const Book& b2);
 
-bool operator <(const Book& b1, const Book& b2);
 
-//operator bool ();
+Result& operator <<(Result& result, Book& book);
 
 #endif // BOOK_H

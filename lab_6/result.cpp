@@ -21,8 +21,3 @@ void Result::GreenOutput(const QString & text)
     this->append(text);
     this->setTextColor(old_color);
 }
-
-/*Result& operator <<(Result& r, std::string text) {
-    r->append(text);
-    return r;
-}*/

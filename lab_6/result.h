@@ -16,6 +16,4 @@ public slots:
     void GreenOutput(const QString & text);
 };
 
-//Result& operator <<(Result& r, std::string text);
-
 #endif // RESULT_H

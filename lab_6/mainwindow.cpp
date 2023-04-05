@@ -56,7 +56,7 @@ void MainWindow::Search()
         Book b;
         b.name = ui->SearchEdit->text().toStdString();
         if (b == books[i]){
-          ui->TextBrowser->append(books[i].to_string());
+          *ui->TextBrowser << books[i];
           error = false;
         }
     }

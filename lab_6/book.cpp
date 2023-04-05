@@ -10,6 +10,7 @@ Book::Book(int id, const std::string& name, const std::string& author, int pages
 
 }
 
+
 QString Book::to_string()
 {
     return QString("%1, %2").arg(QString::fromStdString(name)).arg(year);
@@ -36,9 +37,7 @@ bool operator <(const Book& b1, const Book& b2) {
     return b1.year < b2.year;
 }
 
-/*operator bool () {
-    if () {
-
-    }
-    return true;
-}*/
+Result &operator <<(Result &result, Book &book) {
+    result.append(QString::fromStdString(std::to_string(book.id) + ", " + book.name + ", " + book.author + ", " + std::to_string(book.year) + ", " + std::to_string(book.pages)));
+    return result;
+}
